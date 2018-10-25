@@ -7,14 +7,17 @@ PURPOSE: (Set the initial data values)
 #include "../include/rocket.h"
 
 /* default data job */
-int cannon_default_data(ROCKET* C) {
+int rocket_default_data(ROCKET* C) {
 
 	C->acc[0] = 0.0;
 	C->acc[1] = -9.81;
-	C->init_angle = M_PI / 6;
-	C->init_speed = 50.0;
+	C->init_angle = M_PI/2;
+	C->init_speed = 0.0;
 	C->pos0[0] = 0.0;
 	C->pos0[1] = 0.0;
+	c->thrust = 16400000; 
+	c->drag[0] = 0.0;
+	c->drag[1] = 0.0;
 
 	C->time = 0.0;
 
@@ -25,7 +28,7 @@ int cannon_default_data(ROCKET* C) {
 }
 
 /* initialization job */
-int cannon_init(ROCKET* C) {
+int rocket_init(ROCKET* C) {
 
 	C->vel0[0] = C->init_speed*cos(C->init_angle);
 	C->vel0[1] = C->init_speed*sin(C->init_angle);
