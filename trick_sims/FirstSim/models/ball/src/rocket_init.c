@@ -15,7 +15,8 @@ int rocket_default_data(ROCKET* C) {
 	C->init_speed = 0.0;
 	C->pos0[0] = 0.0;
 	C->pos0[1] = 0.0;
-	c->thrust = 16400000; 
+	c->thrust[0] = 0.0;	
+	c->thrust[1] = 16400000.0; 
 	c->drag[0] = 0.0;
 	c->drag[1] = 0.0;
 
