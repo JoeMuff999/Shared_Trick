@@ -1,0 +1,4 @@
+log_my_cannon byte_order is little_endian
+log_my_cannon	double	     s	sys.exec.out.time
+log_my_cannon	double	     m	dyn.cannon.pos[0]
+log_my_cannon	double	     m	dyn.cannon.pos[1]
