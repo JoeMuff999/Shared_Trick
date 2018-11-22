@@ -12,12 +12,12 @@ typedef struct {
 	double vel0[2];    /* *i m Init velocity of rocket */
 	double pos0[2];    /* *i m Init position of rocket */	
 	double init_angle; /* *i rad Angle of rocket */
-	double mass; /* *i Kg Mass of rocket*/
+	double mass; /* *i kg Mass of rocket*/
 	
 /*lol*/
 	//double drag[2];    /* N xy-drag forces */
 	double gravityForce; /*  N Force of gravity on rocket*/
-	double thrust[2]   /* N xy-thrust of rocket */
+	double thrust[2];  /* N xy-thrust of rocket */
 	double acc[2];     /* m/s2 xy-acceleration  */
 	double vel[2];     /* m/s xy-velocity */
 	double pos[2];     /* m xy-position */

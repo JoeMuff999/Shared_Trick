@@ -1,0 +1,28 @@
+/************************TRICK HEADER*************************
+PURPOSE:
+    (This S_define works with the RUN_analytic input file)
+LIBRARY DEPENDENCIES:
+    (
+      (ball/src/rocket_init.c)
+      (ball/src/rocket_analytic.c)
+      (ball/src/rocket_shutdown.c)
+    )
+*************************************************************/
+
+#include "sim_objects/default_trick_sys.sm"
+##include "ball/include/rocket_analytic.h"
+
+class RocketSimObject : public Trick::SimObject {
+
+    public:
+        ROCKET rocket;
+
+        RocketSimObject() {
+            ("default_data") rocket_default_data( &rocket ) ;
+            ("initialization") rocket_init( &rocket ) ;
+            (0.01, "scheduled") rocket_analytic( &rocket ) ;
+            ("shutdown") rocket_shutdown( &rocket ) ;
+        }
+} ;
+
+RocketSimObject dyn ;

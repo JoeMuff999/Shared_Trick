@@ -7,7 +7,7 @@ PURPOSE: ( Rocket Analytic Model )
 #ifdef __cplusplus
 extern "C" {
 #endif
-int rocket_analytic(ROCKET*) ;
+int rocket_analytic(ROCKET*);
 #ifdef __cplusplus
 }
 #endif

@@ -8,11 +8,11 @@ PURPOSE: (Set the initial data values)
 
 /* default data job */
 int rocket_default_data(ROCKET* C) {
-    C->init_thrust = 16400000.0 //16,400,000 N
+    C->init_thrust = 7607000 ; //7,607,000 N
 	C->acc[0] = 0.0;
 	C->acc[1] = -9.81;
 	C->init_angle = M_PI/2;
-	C->mass = 1420788 // 1,420,788 Kg
+	C->mass = 433100; // 433,100 Kg
 	
 	C->pos0[0] = 0.0;
 	C->pos0[1] = 0.0;
@@ -41,8 +41,8 @@ int rocket_init(ROCKET* C) {
 	C->vel[0] = C->vel0[0];
 	C->vel[1] = C->vel0[1];
 	
-	c->thrust[0] = C->init_thrust*cos(C->init_angle);	
-	c->thrust[1] = C->init_thrust*sin(C->init_angle); 
+	C->thrust[0] = C->init_thrust*cos(C->init_angle);	
+	C->thrust[1] = C->init_thrust*sin(C->init_angle); 
 
 	C->impactTime = 0.0;
 	C->impact = 0.0;
