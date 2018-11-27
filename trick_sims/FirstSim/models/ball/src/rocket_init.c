@@ -17,8 +17,10 @@ int rocket_default_data(ROCKET* C) {
 	C->pos0[0] = 0.0;
 	C->pos0[1] = 0.0;
 		
-	//c->drag[0] = 0.0;
-	//c->drag[1] = 0.0;
+	C->drag[0] = 0.0;
+	C->drag[1] = 0.0;
+	
+	C->airDensity = 1.225;
 
 	C->time = 0.0;
 

@@ -218,6 +218,14 @@ class ROCKET(_object):
     __swig_getmethods__["mass"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_mass_get
     if _newclass:
         mass = _swig_property(_meade57f199c86184507d5c153bb0ff30.ROCKET_mass_get, _meade57f199c86184507d5c153bb0ff30.ROCKET_mass_set)
+    __swig_setmethods__["airDensity"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_airDensity_set
+    __swig_getmethods__["airDensity"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_airDensity_get
+    if _newclass:
+        airDensity = _swig_property(_meade57f199c86184507d5c153bb0ff30.ROCKET_airDensity_get, _meade57f199c86184507d5c153bb0ff30.ROCKET_airDensity_set)
+    __swig_setmethods__["drag"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_drag_set
+    __swig_getmethods__["drag"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_drag_get
+    if _newclass:
+        drag = _swig_property(_meade57f199c86184507d5c153bb0ff30.ROCKET_drag_get, _meade57f199c86184507d5c153bb0ff30.ROCKET_drag_set)
     __swig_setmethods__["gravityForce"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_gravityForce_set
     __swig_getmethods__["gravityForce"] = _meade57f199c86184507d5c153bb0ff30.ROCKET_gravityForce_get
     if _newclass:

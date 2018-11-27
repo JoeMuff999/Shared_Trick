@@ -5100,6 +5100,235 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_ROCKET_airDensity_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ROCKET *arg1 = (ROCKET *) 0 ;
+  double arg2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:ROCKET_airDensity_set",&obj0,&obj1)) SWIG_fail;
+  {
+    // ROCKET *
+    void * temp_ptr ;
+    
+    if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIGTYPE_p_ROCKET, SWIG_POINTER_DISOWN)) ) {
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_swig_ref"), 0)) ) {
+      // Array to pointer assignment
+      swig_ref * temp_swig_ref = reinterpret_cast< swig_ref * >(temp_ptr);
+      if ( temp_swig_ref != NULL ) {
+        arg1 = reinterpret_cast< ROCKET * >(temp_swig_ref->ref.address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_REF2"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      REF2 * temp_ref = reinterpret_cast< REF2 * >(temp_ptr) ;
+      if ( temp_ref != NULL ){
+        arg1 = reinterpret_cast< ROCKET * >(temp_ref->address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_void"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    }
+  }
+  {
+    int ret ;
+    ret = typemap_in_scalar<double >( arg2 , obj1 , "ROCKET_airDensity_set") ;
+    if ( ret != 0 ) {
+      SWIG_exception_fail(SWIG_TypeError,"Right hand side could not be converted proper scalar type");
+    }
+  }
+  if (arg1) (arg1)->airDensity = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ROCKET_airDensity_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ROCKET *arg1 = (ROCKET *) 0 ;
+  PyObject * obj0 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:ROCKET_airDensity_get",&obj0)) SWIG_fail;
+  {
+    // ROCKET *
+    void * temp_ptr ;
+    
+    if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIGTYPE_p_ROCKET, SWIG_POINTER_DISOWN)) ) {
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_swig_ref"), 0)) ) {
+      // Array to pointer assignment
+      swig_ref * temp_swig_ref = reinterpret_cast< swig_ref * >(temp_ptr);
+      if ( temp_swig_ref != NULL ) {
+        arg1 = reinterpret_cast< ROCKET * >(temp_swig_ref->ref.address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_REF2"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      REF2 * temp_ref = reinterpret_cast< REF2 * >(temp_ptr) ;
+      if ( temp_ref != NULL ){
+        arg1 = reinterpret_cast< ROCKET * >(temp_ref->address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_void"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    }
+  }
+  result = (double) ((arg1)->airDensity);
+  {
+    // DOUBLE OUT
+    std::string temp_name ;
+    swig_double * t = new swig_double ;
+    t->value = (double)result ;
+    temp_name = "ROCKET_airDensity_get" ;
+    temp_name.erase(temp_name.length() - 4) ;
+    //cout << "swig_double out looking for param " << temp_name << std::endl ;
+    t->units = Trick::UnitsMap::units_map()->get_units(temp_name) ;
+    //cout << "swig_double out found units " << t->units << std::endl ;
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(t), SWIG_TypeQuery("_p_swig_double"), SWIG_POINTER_OWN);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ROCKET_drag_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ROCKET *arg1 = (ROCKET *) 0 ;
+  double *arg2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:ROCKET_drag_set",&obj0,&obj1)) SWIG_fail;
+  {
+    // ROCKET *
+    void * temp_ptr ;
+    
+    if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIGTYPE_p_ROCKET, SWIG_POINTER_DISOWN)) ) {
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_swig_ref"), 0)) ) {
+      // Array to pointer assignment
+      swig_ref * temp_swig_ref = reinterpret_cast< swig_ref * >(temp_ptr);
+      if ( temp_swig_ref != NULL ) {
+        arg1 = reinterpret_cast< ROCKET * >(temp_swig_ref->ref.address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_REF2"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      REF2 * temp_ref = reinterpret_cast< REF2 * >(temp_ptr) ;
+      if ( temp_ref != NULL ){
+        arg1 = reinterpret_cast< ROCKET * >(temp_ref->address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_void"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    }
+  }
+  {
+    //ARRAY[ANY] IN
+    arg2 = typemap_in_1d<double>( obj1 , 2, "ROCKET_drag_set") ;
+    if ( arg2 == NULL ) {
+      SWIG_exception_fail(SWIG_TypeError,"Right hand side could not be converted to proper array type");
+    }
+  }
+  {
+    if (arg2) {
+      size_t ii = 0;
+      for (; ii < (size_t)2; ++ii) *(double *)&arg1->drag[ii] = *((double *)arg2 + ii);
+    } else {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""drag""' of type '""double [2]""'");
+    }
+  }
+  resultobj = SWIG_Py_Void();
+  {
+    free(arg2) ;
+  }
+  return resultobj;
+fail:
+  {
+    free(arg2) ;
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_ROCKET_drag_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  ROCKET *arg1 = (ROCKET *) 0 ;
+  PyObject * obj0 = 0 ;
+  double *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:ROCKET_drag_get",&obj0)) SWIG_fail;
+  {
+    // ROCKET *
+    void * temp_ptr ;
+    
+    if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIGTYPE_p_ROCKET, SWIG_POINTER_DISOWN)) ) {
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_swig_ref"), 0)) ) {
+      // Array to pointer assignment
+      swig_ref * temp_swig_ref = reinterpret_cast< swig_ref * >(temp_ptr);
+      if ( temp_swig_ref != NULL ) {
+        arg1 = reinterpret_cast< ROCKET * >(temp_swig_ref->ref.address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_REF2"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      REF2 * temp_ref = reinterpret_cast< REF2 * >(temp_ptr) ;
+      if ( temp_ref != NULL ){
+        arg1 = reinterpret_cast< ROCKET * >(temp_ref->address) ;
+      }
+    } else if ( SWIG_IsOK(SWIG_ConvertPtr(obj0, &temp_ptr,SWIG_TypeQuery("_p_void"), 0)) ) {
+      // We have an address coming in, we don't have to do any translation
+      arg1 = reinterpret_cast< ROCKET * >(temp_ptr) ;
+    }
+  }
+  result = (double *)(double *) ((arg1)->drag);
+  {
+    std::string temp_name ;
+    
+    swig_ref * t = new swig_ref ;
+    
+    t->ref.address = (void *)result;
+    t->ref.units = NULL ;
+    
+    t->ref.attr = Trick::PrimitiveAttributesMap::attributes_map()->get_attr("double") ;
+    // PrimitiveAttributes lookup failed. Probably an enum. Create a new attributes based on size of type.
+    if ( t->ref.attr == NULL ) {
+      t->ref.attr = new ATTRIBUTES() ;
+      t->ref.attr->size  = sizeof(double) ;
+      switch ( t->ref.attr->size ) {
+        case 1: t->ref.attr->type = TRICK_CHARACTER ; break ;
+        case 2: t->ref.attr->type = TRICK_SHORT ; break ;
+        case 4: t->ref.attr->type = TRICK_INTEGER ; break ;
+        case 8: t->ref.attr->type = TRICK_LONG_LONG ; break ;
+        default: t->ref.attr->type = TRICK_INTEGER ; break ;
+      }
+      t->ref.attr->io  = TRICK_VAR_OUTPUT | TRICK_VAR_INPUT | TRICK_CHKPNT_OUTPUT | TRICK_CHKPNT_INPUT ;
+    }
+    
+    t->ref.attr->type_name  = strdup("double") ;
+    t->ref.attr->num_index  = 1 ;
+    t->ref.attr->index[0].size  = 2 ;
+    
+    t->ref.create_add_path  = 0 ;
+    t->ref.num_index  = 0 ;
+    t->ref.num_index_left  = 1 ;
+    t->ref.ref_type  = REF_ADDRESS ;
+    
+    temp_name = "ROCKET_drag_get" ;
+    temp_name.erase(temp_name.length() - 4) ;
+    t->ref.attr->units = strdup(Trick::UnitsMap::units_map()->get_units(temp_name).c_str()) ;
+    
+    resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(t), SWIG_TypeQuery("_p_swig_ref"), SWIG_POINTER_OWN);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_ROCKET_gravityForce_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   ROCKET *arg1 = (ROCKET *) 0 ;
@@ -6347,6 +6576,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"ROCKET_init_angle_get", _wrap_ROCKET_init_angle_get, METH_VARARGS, NULL},
 	 { (char *)"ROCKET_mass_set", _wrap_ROCKET_mass_set, METH_VARARGS, NULL},
 	 { (char *)"ROCKET_mass_get", _wrap_ROCKET_mass_get, METH_VARARGS, NULL},
+	 { (char *)"ROCKET_airDensity_set", _wrap_ROCKET_airDensity_set, METH_VARARGS, NULL},
+	 { (char *)"ROCKET_airDensity_get", _wrap_ROCKET_airDensity_get, METH_VARARGS, NULL},
+	 { (char *)"ROCKET_drag_set", _wrap_ROCKET_drag_set, METH_VARARGS, NULL},
+	 { (char *)"ROCKET_drag_get", _wrap_ROCKET_drag_get, METH_VARARGS, NULL},
 	 { (char *)"ROCKET_gravityForce_set", _wrap_ROCKET_gravityForce_set, METH_VARARGS, NULL},
 	 { (char *)"ROCKET_gravityForce_get", _wrap_ROCKET_gravityForce_get, METH_VARARGS, NULL},
 	 { (char *)"ROCKET_thrust_set", _wrap_ROCKET_thrust_set, METH_VARARGS, NULL},

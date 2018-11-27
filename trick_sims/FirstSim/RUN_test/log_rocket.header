@@ -1,0 +1,5 @@
+log_rocket is in ASCII
+log_rocket	double	     s	sys.exec.out.time
+log_rocket	double	     m	x_pos
+log_rocket	double	     m	y_pos
+log_rocket	double	   rad	angle

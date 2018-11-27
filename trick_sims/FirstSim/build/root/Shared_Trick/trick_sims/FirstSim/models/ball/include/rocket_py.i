@@ -36,7 +36,10 @@ typedef struct {
 	
 
 
-	
+    double airDensity; 
+
+	double drag[2];    
+
 	double gravityForce; 
 
 	double thrust[2];  

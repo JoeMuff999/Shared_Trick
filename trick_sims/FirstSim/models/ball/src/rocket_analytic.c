@@ -6,15 +6,63 @@ PURPOSE:    ( Analytical Rocket )
 #include "../include/rocket_analytic.h"
 
 int rocket_analytic(ROCKET* C) {
+	
+	
+	//Air Density changes based on altitude
+	if(C->pos[1] > 1000)
+	{
+		C->airDensity = 1.112;
+		if(C->pos[1] > 5000)
+		{
+			C->airDensity = .7364;
+			if(C->pos[1] > 10000)
+			{
+				C->airDensity = .4135;
+				if(C->pos[1] > 15000)
+				{
+					C->airDensity = .1948;
+					if(C->pos[1] > 20000)
+					{
+						C->airDensity = .08891;
+						if(C->pos[1] > 25000)
+						{
+							C->airDensity = .04008;
+							if(C->pos[1] > 30000)
+							{
+								C->airDensity = .01841;
+								if(C->pos[1] > 40000)
+								{
+									C->airDensity = .003996;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	//recalculate drag each time based on angle
+	C->drag[0] = .82 * (3.66 * sin(C->angle) * 	68.428) *.5*C->airDensity*C->vel[0]*C->vel[0];
+	C->drag[1] = .42 *(3.66 * cos(C->angle)*68.428)*.5 *C->airDensity*C->vel[1]*C->vel[1];
     //recalculate thrust every time based on angle (which may change if im cool)
 	C->thrust[0] = C->init_thrust*cos(C->angle);	
 	C->thrust[1] = C->init_thrust*sin(C->angle); 
 	//recalculate acceleration every time based on thrust changes
-	C->acc[0] = C->thrust[0]/C->mass;  // x thrust / mass basically just Forcex / mass, this value gonna be 0 tho lol
-	C->acc[1] = (C->thrust[1] + C->gravityForce)/C->mass;  //need (Fthrust - Fgravity)/mass
+	C->acc[0] = (C->thrust[0]-C->drag[0])/C->mass;  // x thrust / mass basically just Forcex / mass, this value gonna be 0 tho lol
+	C->acc[1] = (C->thrust[1] + C->gravityForce-C->drag[1])/C->mass;  //need (Fthrust - Fgravity)/mass
+	
+if(C->acc[0] < 0 || C->acc[1] < 0)
+{
+			fprintf(stderr, "\n\nIMPACT: t = %.9f, dragx = %.9f, dragy = %.9f, mass = %.9f, vel = %.9f, thrustx = %.9f, angle = %.9f", C->time, C->drag[0],  C->drag[1], C->mass, C->vel[0], C->thrust[0],C->angle);
+
+}
 	//recalculate velocity these are not used for calculations, but rather for graphing purposes
-	C->vel[0] = C->vel0[0] + C->acc[0] * C->time;
-	C->vel[1] = C->vel0[1] + C->acc[1] * C->time;
+	C->vel[0] = C->vel[0] + C->acc[0] * .01;
+	C->vel[1] = C->vel[1] + C->acc[1] * .01;
 	//recalc position
 	C->pos[0] = C->pos[0] + (C->vel[0] * .01) + ((0.5) * C->acc[0] * .01) * .01; // add itself to itself every .01 seconds with new acceleration
 	C->pos[1] = C->pos[1] + (C->vel[1] * .01) + ((0.5) * C->acc[1] * .01) * .01;

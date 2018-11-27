@@ -922,6 +922,21 @@
       description="Mass of rocket">
     </member>
     <member
+      name="airDensity"
+      type="double"
+      io_attributes="15"
+      units="kg/m3"
+      description="air density (rho)">
+    </member>
+    <member
+      name="drag"
+      type="double"
+      io_attributes="15"
+      units="N"
+      description="xy-drag forces">
+      <dimension>2</dimension>
+    </member>
+    <member
       name="gravityForce"
       type="double"
       io_attributes="15"

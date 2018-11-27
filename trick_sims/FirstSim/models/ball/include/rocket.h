@@ -15,7 +15,8 @@ typedef struct {
 	double mass; /* *i kg Mass of rocket*/
 	
 /*lol*/
-	//double drag[2];    /* N xy-drag forces */
+    double airDensity; /* kg/m3 air density (rho)*/
+	double drag[2];    /* N xy-drag forces */
 	double gravityForce; /*  N Force of gravity on rocket*/
 	double thrust[2];  /* N xy-thrust of rocket */
 	double acc[2];     /* m/s2 xy-acceleration  */
