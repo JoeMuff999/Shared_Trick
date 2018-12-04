@@ -14464,6 +14464,12 @@
   </top_level_object>
 
   <top_level_object
+   name="trick_data_record_group_rocket"
+   type="Trick__DRAscii"
+   alloc_memory_init="0">
+  </top_level_object>
+
+  <top_level_object
    name="trick_dmtcp"
    type="DMTCPSimObject"
    alloc_memory_init="1">
@@ -14476,15 +14482,39 @@
   </top_level_object>
 
   <top_level_object
+   name="trick_frame"
+   type="Trick__FrameDataRecordGroup"
+   alloc_memory_init="0">
+  </top_level_object>
+
+  <top_level_object
    name="trick_frame_log"
    type="FrameLogSimObject"
    alloc_memory_init="1">
   </top_level_object>
 
   <top_level_object
+   name="trick_frame_trick_jobs"
+   type="Trick__FrameDataRecordGroup"
+   alloc_memory_init="0">
+  </top_level_object>
+
+  <top_level_object
+   name="trick_frame_userjobs_main"
+   type="Trick__FrameDataRecordGroup"
+   alloc_memory_init="0">
+  </top_level_object>
+
+  <top_level_object
    name="trick_inject"
    type="InjectorSimObject"
    alloc_memory_init="1">
+  </top_level_object>
+
+  <top_level_object
+   name="trick_injector_executor_0"
+   type="InjectorExecSimObject"
+   alloc_memory_init="0">
   </top_level_object>
 
   <top_level_object

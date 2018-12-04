@@ -1,5 +1,5 @@
 
-#execfile("Modified_data/realtime.py")
+execfile("Modified_data/realtime.py")
 
 #drg = trick.DRAscii("cannon")
 #trick.add_data_record_group(drg, trick.DR_Buffer)

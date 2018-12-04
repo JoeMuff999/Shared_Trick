@@ -2,7 +2,7 @@
 ===============================================================================
 General:
 
-Executable called = /root/trick_sims/SIM_cannon_analytic/S_main_Linux_5.4_x86_64.exe
+Executable called = /root/Shared_Trick/trick_sims/SIM_cannon_analytic/S_main_Linux_5.4_x86_64.exe
 Input file = RUN_test/input.py
 S_main build time = Sun Sep 30 14:01:01 2018
 Trick version = 17.4.dev
