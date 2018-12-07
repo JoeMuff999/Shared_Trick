@@ -1,3 +1,17 @@
-|L   1|2018/12/03,23:04:48|DESKTOP-CG71G84| |T 0|0.000000| Freeze ON. Simulation time holding at 0.000000 seconds.
-|L   1|2018/12/03,23:13:07|DESKTOP-CG71G84| |T 0|0.000000| Freeze OFF.
-|L   1|2018/12/03,23:14:50|DESKTOP-CG71G84| |T 0|103.400000| Freeze ON. Simulation time holding at 103.400000 seconds.
+|L   2|2018/12/04,22:55:14|DESKTOP-CG71G84| |T 0|0.000000| Cycle for (trick_data_record_group_rocket.data_record) cannot be exactly scheduled with time tic value. cycle =   0.016666600000, cycle_tics = 16667 , time_tic =   0.000001000000
+|L   0|2018/12/04,22:55:14|DESKTOP-CG71G84| |T 0|162.000000| 
+     REALTIME SHUTDOWN STATS:
+            ACTUAL INIT TIME:        0.216
+         ACTUAL ELAPSED TIME:        0.318
+|L   0|2018/12/04,22:55:14|DESKTOP-CG71G84| |T 0|162.000000| 
+SIMULATION TERMINATED IN
+  PROCESS: 0
+  ROUTINE: Executive_loop_single_thread.cpp:98
+  DIAGNOSTIC: Reached termination time
+
+       SIMULATION START TIME:        0.000
+        SIMULATION STOP TIME:      162.000
+     SIMULATION ELAPSED TIME:      162.000
+        ACTUAL CPU TIME USED:        0.109
+       SIMULATION / CPU TIME:     1481.143
+     INITIALIZATION CPU TIME:        0.062
